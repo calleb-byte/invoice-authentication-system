@@ -1,0 +1,1 @@
+# InvoiceAuth.sol placeholder
