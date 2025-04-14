@@ -8,9 +8,9 @@ with open("compiled_contract.json", "r") as file:
 abi = compiled["contracts"]["InvoiceAuth.sol"]["InvoiceAuth"]["abi"]
 bytecode = compiled["contracts"]["InvoiceAuth.sol"]["InvoiceAuth"]["evm"]["bytecode"]["object"]
 
-web3 = Web3(Web3.HTTPProvider("https://goerli.infura.io/v3/YOUR_INFURA_PROJECT_ID"))
-account = "YOUR_WALLET_ADDRESS"
-private_key = "YOUR_PRIVATE_KEY"
+web3 = Web3(Web3.HTTPProvider("https://mainnet.infura.io/v3/1bf182181f0147939b58df2012ffc249"))
+account = "0x9123317C21c16801123BAD11F7e9fe1D5769CBd5"
+private_key = "0x84354beca42fdcb10c8b41c4d995a5310040a29beae7f30f607a4ee5b597ea23"
 nonce = web3.eth.get_transaction_count(account)
 
 contract = web3.eth.contract(abi=abi, bytecode=bytecode)
